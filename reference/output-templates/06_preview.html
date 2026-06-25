@@ -1,0 +1,130 @@
+<!-- Stage 06 — Delivery Package: sharable preview skeleton.
+     Self-contained: inline CSS, no external assets, print-friendly, opens in any browser.
+     Replace every [bracketed placeholder]. This is the structural basis for the real preview. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Customer name] — Workflow Preview</title>
+  <style>
+    :root {
+      --ink:        #1c2230;
+      --muted:      #5b6472;
+      --line:       #e3e7ee;
+      --accent:     #1f7a6d;   /* product brand accent */
+      --accent-soft:#e8f3f1;
+      --gate:       #8a5a00;
+      --gate-soft:  #fdf3e0;
+      --bg:         #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f4f6f9;
+      color: var(--ink);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .page {
+      max-width: 760px;
+      margin: 32px auto;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 44px 52px;
+    }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 18px; margin-bottom: 28px; }
+    .eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    h1 { font-size: 26px; margin: 8px 0 4px; line-height: 1.2; }
+    .sub { color: var(--muted); font-size: 15px; margin: 0; }
+    h2 { font-size: 18px; margin: 34px 0 10px; }
+    p { margin: 0 0 12px; }
+    .lede { font-size: 17px; color: var(--ink); }
+    blockquote {
+      margin: 14px 0; padding: 12px 18px;
+      background: var(--accent-soft); border-left: 4px solid var(--accent);
+      border-radius: 4px; color: var(--ink); font-style: italic;
+    }
+    ul { margin: 8px 0 14px; padding-left: 20px; }
+    li { margin: 6px 0; }
+    .card {
+      border: 1px solid var(--line); border-radius: 8px;
+      padding: 18px 20px; margin: 14px 0;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 16px; }
+    .tag {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      padding: 2px 9px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent); margin-right: 6px;
+    }
+    .gate {
+      background: var(--gate-soft); border-left: 4px solid var(--gate);
+      border-radius: 4px; padding: 10px 16px; margin: 10px 0;
+      font-size: 14px; color: var(--gate);
+    }
+    .gate strong { color: var(--gate); }
+    footer {
+      margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
+      font-size: 13px; color: var(--muted);
+    }
+    @media print {
+      body { background: #fff; }
+      .page { border: none; margin: 0; max-width: none; border-radius: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+      <div class="eyebrow">[Product name] &middot; Workflow Preview</div>
+      <h1>[Customer name]: [one-line framing of their workflow]</h1>
+      <p class="sub">Prepared for [contact name, role] &middot; [meeting date]</p>
+    </header>
+
+    <p class="lede">[One-paragraph summary of the customer's workflow and pain, in their own
+      framing — what the team does today and what it costs.]</p>
+
+    <h2>What we heard</h2>
+    <p>[Restate the customer's workflow and the pain you're solving. Specific roles,
+      documents, volumes.]</p>
+    <blockquote>"[direct customer quote that anchors the whole preview]"</blockquote>
+
+    <h2>What we'd show you</h2>
+
+    <div class="card">
+      <h3>[Lead recommendation title]</h3>
+      <p><span class="tag">[Pattern #]</span><span class="tag">[Out-of-the-box / Custom build]</span></p>
+      <p>[What the demo shows on the customer's own kind of material, and the result they'd
+        see.]</p>
+      <div class="gate"><strong>Honest note:</strong> [the deployment reality / gate for this
+        recommendation — stated plainly, not buried].</div>
+    </div>
+
+    <div class="card">
+      <h3>[Supporting recommendation title]</h3>
+      <p><span class="tag">[Pattern #]</span><span class="tag">[Out-of-the-box / Custom build]</span></p>
+      <p>[What it adds.]</p>
+      <div class="gate"><strong>Honest note:</strong> [gate].</div>
+    </div>
+
+    <h2>What this is — and isn't</h2>
+    <ul>
+      <li>[The output is an analytical aid that supports your reviewers' judgment.]</li>
+      <li><strong>It is not a [coverage determination / automated decision].</strong> Your
+        team makes the call; this shows its work against the source.</li>
+    </ul>
+
+    <h2>Suggested next step</h2>
+    <p>[The ask — e.g., confirm this matches your workflow, and bring [written criteria /
+      a sample file] to the meeting so the demo runs on your own material.]</p>
+
+    <footer>
+      Prepared by [rep name] &middot; [rep email] &middot; [date]<br>
+      This preview is a demo aid for discussion. It does not constitute a commitment of
+      product capability.
+    </footer>
+
+  </main>
+</body>
+</html>
