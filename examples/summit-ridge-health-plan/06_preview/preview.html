@@ -1,0 +1,197 @@
+<!-- Stage 06 — Delivery Package: sharable preview for Summit Ridge Health Plan.
+     Self-contained: inline CSS, no external assets, print-friendly, opens in any browser.
+     All data is synthetic / de-identified demo content. Product (Veridian+ with Atlas) is fictitious. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Summit Ridge Health Plan — Workflow Preview</title>
+  <style>
+    :root {
+      --ink:        #1c2230;
+      --muted:      #5b6472;
+      --line:       #e3e7ee;
+      --accent:     #1f7a6d;   /* Veridian brand accent */
+      --accent-soft:#e8f3f1;
+      --gate:       #8a5a00;
+      --gate-soft:  #fdf3e0;
+      --met:        #1f7a4d;
+      --met-soft:   #e6f4ec;
+      --flag:       #9a5b00;
+      --flag-soft:  #fbeeda;
+      --bg:         #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f4f6f9;
+      color: var(--ink);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .page {
+      max-width: 780px;
+      margin: 32px auto;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 44px 52px;
+    }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 18px; margin-bottom: 28px; }
+    .eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    h1 { font-size: 26px; margin: 8px 0 4px; line-height: 1.22; }
+    .sub { color: var(--muted); font-size: 15px; margin: 0; }
+    h2 { font-size: 18px; margin: 34px 0 10px; }
+    p { margin: 0 0 12px; }
+    .lede { font-size: 17px; color: var(--ink); }
+    blockquote {
+      margin: 14px 0; padding: 12px 18px;
+      background: var(--accent-soft); border-left: 4px solid var(--accent);
+      border-radius: 4px; color: var(--ink); font-style: italic;
+    }
+    ul { margin: 8px 0 14px; padding-left: 20px; }
+    li { margin: 6px 0; }
+    .card {
+      border: 1px solid var(--line); border-radius: 8px;
+      padding: 18px 20px; margin: 14px 0;
+    }
+    .card.lead { border-color: var(--accent); border-width: 1.5px; }
+    .card h3 { margin: 0 0 8px; font-size: 16px; }
+    .tag {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      padding: 2px 9px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent); margin-right: 6px;
+    }
+    .gate {
+      background: var(--gate-soft); border-left: 4px solid var(--gate);
+      border-radius: 4px; padding: 10px 16px; margin: 12px 0 2px;
+      font-size: 14px; color: var(--gate);
+    }
+    .gate strong { color: var(--gate); }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0 4px; font-size: 14px; }
+    caption { caption-side: top; text-align: left; color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .status { font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+    .status.met  { background: var(--met-soft);  color: var(--met); }
+    .status.flag { background: var(--flag-soft); color: var(--flag); }
+    .cite { color: var(--muted); font-size: 13px; }
+    .callout {
+      background: var(--accent-soft); border-radius: 8px; padding: 14px 18px; margin: 14px 0;
+      font-size: 15px;
+    }
+    footer {
+      margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
+      font-size: 13px; color: var(--muted);
+    }
+    @media print {
+      body { background: #fff; }
+      .page { border: none; margin: 0; max-width: none; border-radius: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+      <div class="eyebrow">Veridian+ with Atlas &middot; Workflow Preview</div>
+      <h1>Summit Ridge Health Plan: every reviewer, the same read of the same file</h1>
+      <p class="sub">Prepared for Karen Whitfield, Director of Utilization Review &middot; ahead of our demo call</p>
+    </header>
+
+    <p class="lede">You run ~3,200 prior-auth requests a month with twelve reviewers. The complex
+      files — spine, inpatient, specialty pharmacy — arrive as 100–150-page packets, and a reviewer
+      spends the first hour just finding what's in them. You have written medical-necessity criteria,
+      yet two reviewers reach different determinations on roughly one in six complex cases. Below is
+      what we heard, and what we'd show you — on your own kind of case, not a generic deck.</p>
+
+    <h2>What we heard</h2>
+    <p>The variance isn't usually about medicine. It's about what each reviewer found in the file —
+      and that variance is what drives your six-week, ~180-case appeals backlog, some of it on
+      statutory clocks.</p>
+    <blockquote>"One reviewer found the conservative-therapy documentation on page ninety and the
+      other one missed it. It wasn't a disagreement about medicine. It was a disagreement about what
+      was in the file." — Dr. Elias Hale</blockquote>
+
+    <h2>What we'd show you</h2>
+
+    <div class="card lead">
+      <h3>1. A medical-necessity checklist that gives every reviewer the same structured read</h3>
+      <p><span class="tag">Lead &middot; Pattern 6</span><span class="tag">Custom build</span></p>
+      <p>We configure an <strong>Atlas Skill</strong> against <em>your</em> written spine criteria. It
+        takes a claim file and goes criterion by criterion — met, not met, or not documented — each
+        with a citation back to the page. Run on a de-identified spine packet you provide, every
+        reviewer starts from the same cited read, instead of each hunting through 140 pages alone.</p>
+
+      <table>
+        <caption>Sample output — synthetic L4–L5 lumbar-fusion packet (131 pp., consolidated)</caption>
+        <thead>
+          <tr><th>Criterion</th><th>Status</th><th>Citation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Symptom duration (≥ policy minimum)</td><td><span class="status met">MET</span></td><td class="cite">p.4 — H&P, ~11 mo.</td></tr>
+          <tr><td>Objective neurological findings</td><td><span class="status met">MET</span></td><td class="cite">pp.7–8 exam; p.64</td></tr>
+          <tr><td>Imaging–symptom correlation</td><td><span class="status met">MET</span></td><td class="cite">pp.23–24 MRI</td></tr>
+          <tr><td>Instability / fusion indication</td><td><span class="status met">MET</span></td><td class="cite">p.28 flex/ext X-ray</td></tr>
+          <tr><td>Conservative therapy for minimum duration</td><td><span class="status flag">NOT DOCUMENTED</span></td><td class="cite">p.14, pp.41–44 (p.43 illegible), p.90 — scattered</td></tr>
+          <tr><td>Absence of contraindications</td><td><span class="status met">MET</span></td><td class="cite">p.6 — former smoker, quit 7 yrs</td></tr>
+          <tr><td>Surgical scope appropriateness</td><td><span class="status met">MET</span></td><td class="cite">p.1 vs pp.23–24 single-level</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">The one flagged item is exactly your page-90 problem: the conservative-therapy
+        evidence <em>exists</em> but is scattered across pages 14, 41–44, and 90 — and page 43 is an
+        illegible handwritten note. The checklist surfaces it as <strong>not documented</strong> with the
+        citations, so the reviewer confirms or refutes in one click instead of silently missing it.</div>
+
+      <div class="gate"><strong>Honest note:</strong> the technology isn't the hard part — getting your
+        "ugly" spine policy into clean, structured criteria is. That conversion runs through the
+        <strong>Determination Library</strong> and needs a clinical owner to curate it (Dr. Hale
+        volunteered — that's the right instinct).</div>
+    </div>
+
+    <div class="card">
+      <h3>2. A one-page reviewer brief of the whole file, with citations</h3>
+      <p><span class="tag">Supporting &middot; Pattern 3</span><span class="tag">Out of the box</span></p>
+      <p>Load the consolidated claim file into <strong>Caseboard</strong> and ask across it: documented
+        onset, what conservative care was tried and for how long, what imaging showed. The hour of
+        orientation becomes a cited one-page brief in seconds.</p>
+      <div class="gate"><strong>Honest note:</strong> Caseboard is single-user today — every reviewer
+        gets this on their own files, not one shared team board (shared boards are on the roadmap, not
+        shipped). Retrieval is best on a consolidated text file, and OCR on handwriting is uneven.</div>
+    </div>
+
+    <div class="card">
+      <h3>3. "How did we decide this kind of case before?"</h3>
+      <p><span class="tag">Next phase &middot; Pattern 4</span><span class="tag">Out of the box</span></p>
+      <p>Caseboard can compare a new submission against a prior file and surface what's consistent and
+        what diverges — a starting answer to the precedent question you said you can never answer fast.</p>
+      <div class="gate"><strong>Honest note:</strong> same single-user gate — there is no shared,
+        team-wide precedent board yet. The canonical "what's our position on this criterion" answer is
+        what the Determination Library is for, once it's built. We won't sell you a precedent board that
+        doesn't exist.</div>
+    </div>
+
+    <h2>What this is — and isn't</h2>
+    <ul>
+      <li>It is an <strong>analytical aid</strong> that gives your reviewers a consistent, cited
+        starting point and shows its work against the record.</li>
+      <li><strong>It is not a coverage determination.</strong> Your reviewers make the call; nothing we
+        produce becomes the determination of record. We'll say that again with legal in the room.</li>
+    </ul>
+
+    <h2>Suggested next step</h2>
+    <p>Confirm this matches your workflow. For the demo, send one <strong>de-identified complex spine
+      file</strong> and your <strong>written spine medical-necessity criteria</strong> (the messy
+      policy-doc form is fine). We'll build the checklist against your criteria and run it on your own
+      case — and we'll have legal on the call.</p>
+
+    <footer>
+      Prepared by Daniel Reyes, Sales Engineer &middot; Veridian Health<br>
+      This preview is a demo aid for discussion. All names and records are synthetic / de-identified.
+      It does not constitute a commitment of product capability.
+    </footer>
+
+  </main>
+</body>
+</html>
