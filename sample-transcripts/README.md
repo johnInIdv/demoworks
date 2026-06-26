@@ -16,25 +16,28 @@ pipeline outputs yet** — so a viewer sees the work happen live.
 
 ## How to run it in a video (≈ the on-camera flow)
 
+Pitchcraft is set up so that **pasting a transcript is the only action needed** — the root
+`CLAUDE.md` tells Claude Code to run the pipeline automatically when it receives a transcript.
+
 1. **Show the brief.** Open `brief.md` — the real problem Pitchcraft solves.
 2. **Show the folder.** Point out `identity.md`, `rules.md`, and especially
    `reference/solution-patterns.md` (the leverage). One line: "the method is general; the
    knowledge in `reference/` is what makes it product-specific."
-3. **Drop in the transcript.** Copy `sample-transcripts/harbor-point-appeals-intake.md` into a
-   new working folder's input, e.g.:
+3. **Start Claude Code in this folder** so it auto-reads `CLAUDE.md`:
    ```
-   mkdir -p examples/harbor-point/00_input
-   cp sample-transcripts/harbor-point-appeals-intake.md examples/harbor-point/00_input/discovery-call-transcript.md
+   cd /path/to/pitchcraft
+   claude
    ```
-4. **Run the pipeline.** In your AI assistant, with this folder loaded, paste a prompt like:
+4. **Paste the transcript.** Open `sample-transcripts/harbor-point-appeals-intake.md`, copy its
+   whole contents, and paste it into Claude Code. That's it — Claude recognizes a transcript,
+   creates `examples/harbor-point/`, and runs the six stages, announcing each one. (If you'd
+   rather pause between stages, add "stop at each stage" to your paste.)
+5. **Show the payoff.** Open the generated `examples/harbor-point/06_preview/preview.html` in a
+   browser — the tailored one-page memo, on a customer the system had never seen before.
 
-   > Load this Pitchcraft folder. Read `identity.md` and `rules.md`. Then run the pipeline in
-   > `rules.md` on the transcript in `examples/harbor-point/00_input/`, using the knowledge in
-   > `reference/`. Produce stages 01–04 as separate files, generate the stage-05 assets, and
-   > build the stage-06 HTML preview. Stop at each stage so I can review.
-
-5. **Show the payoff.** Open the generated `06_preview.html` in a browser — the tailored
-   one-page memo, on a customer the system had never seen before.
+> Tip: the strongest beat is stopping on **stage 03 (opportunity mapping)** — that's where you
+> can show Pitchcraft reasoning to *Pattern 1 (intake & triage)*, a different lead than Summit
+> Ridge's Pattern 6.
 
 ## Note
 
