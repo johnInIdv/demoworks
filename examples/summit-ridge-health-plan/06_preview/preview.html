@@ -1,8 +1,9 @@
 <!-- Stage 06 — Delivery Package: pre-demo brochure for Summit Ridge Health Plan.
-     Visual theme: modern fintech-brochure — two-mode canvas (true-black storytelling bands alternating
-     with white catalogue bands), large mixed-case display headlines, pill buttons, rounded-20 cards,
-     cobalt-violet (#494fdf) reserved for the single featured "main event" card, accent colours used
-     only inside the sample-output mockup. Depth via band switches + surface luminance, no shadows.
+     Visual theme: athletic-editorial commerce — "billboard above, catalog below."
+     Towering uppercase display lockups on solid black campaign panels, then an austere
+     black / white / single-gray (#f5f5f5) catalog: pill CTAs, flat zero-radius cards,
+     8px grid, hairline dividers, no shadows. Colour reserved for signal only — sale red
+     (#d30005) and success green (#007d48) appear only in the sample-output readout.
      Self-contained: inline CSS + inline SVG, no external assets, print-friendly.
      A BROCHURE for the demo — visual, skimmable, framed around the customer's outcome.
      All data is synthetic / de-identified. Product (Veridian+ with Atlas) is fictitious. -->
@@ -14,120 +15,117 @@
   <title>Summit Ridge Health Plan — Your Demo Preview</title>
   <style>
     :root{
-      --primary:#494fdf; --on-primary:#fff;
-      --ink:#191c1f; --body:#1f2226; --mute:#505a63; --ash:#5c5e60; --stone:#8d969e;
-      --black:#000; --deep:#0a0a0a; --elevated:#16181a;
-      --white:#fff; --soft:#f4f4f4; --hair-l:#e2e2e7; --hair-d:rgba(255,255,255,.12);
-      --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.72);
-      --teal:#00a87e; --pink:#e61e49; --green:#428619; --warning:#ec7e00;
-      --disp:"Aeonik Pro","Inter Display","Söhne",-apple-system,"Helvetica Neue",Arial,sans-serif;
-      --text:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;
+      --ink:#111111; --canvas:#fff; --cloud:#f5f5f5;
+      --charcoal:#39393b; --mute:#707072; --stone:#9e9ea0;
+      --hair:#cacacb; --hair-soft:#e5e5e5;
+      --sale:#d30005; --success:#007d48;
+      --disp:"Arial Narrow","Helvetica Neue",Helvetica,Arial,sans-serif;
+      --text:"Helvetica Now Text","Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
     }
     *{box-sizing:border-box;}
-    body{margin:0;background:#000;color:var(--body);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
-    .page{max-width:900px;margin:0 auto;}
-    .band{padding:64px 56px;}
-    .dark{background:var(--black);color:var(--on-dark);}
-    .light{background:var(--white);color:var(--ink);}
-    h1{font-family:var(--disp);font-weight:500;font-size:64px;line-height:1.0;letter-spacing:-1.3px;margin:0 0 22px;}
-    h2{font-family:var(--disp);font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.6px;margin:0 0 10px;}
-    h3{font-family:var(--disp);font-weight:500;font-size:21px;line-height:1.3;letter-spacing:-.2px;margin:0 0 6px;}
+    body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+    .page{max-width:960px;margin:0 auto;}
+    .band{padding:48px 56px;}
+    .campaign{background:var(--ink);color:#fff;padding:72px 56px;}
+    /* type */
+    .display{font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;font-size:74px;margin:0;}
+    h2{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:30px;line-height:1.05;letter-spacing:-.005em;margin:0 0 6px;}
+    h3{font-family:var(--text);font-weight:600;font-size:18px;line-height:1.3;margin:0 0 6px;}
     p{margin:0 0 14px;}
-    .kicker{font-family:var(--text);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin:0 0 18px;}
-    .light .kicker{color:var(--mute);}
-    .lede{font-family:var(--text);font-size:19px;line-height:1.55;letter-spacing:-.09px;max-width:60ch;}
-    .dark .lede{color:var(--on-dark-mute);}
-    .badge{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.01em;padding:6px 14px;border-radius:9999px;background:var(--primary);color:#fff;margin-bottom:24px;}
-    .meta{margin-top:30px;font-family:var(--text);font-size:14px;color:var(--on-dark-mute);display:flex;gap:24px;flex-wrap:wrap;}
+    .kicker{font-family:var(--text);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 20px;}
+    .campaign .kicker{color:var(--stone);}
+    .lede{font-size:18px;line-height:1.55;color:var(--charcoal);max-width:60ch;}
+    .campaign .lede{color:rgba(255,255,255,.82);}
+    .meta{margin-top:26px;font-size:13px;letter-spacing:.04em;color:var(--stone);text-transform:uppercase;display:flex;gap:22px;flex-wrap:wrap;}
     .meta b{color:#fff;font-weight:600;}
-    .btn{display:inline-block;font-family:var(--text);font-size:16px;font-weight:600;letter-spacing:.24px;padding:15px 30px;border-radius:9999px;text-decoration:none;border:none;cursor:pointer;}
-    .btn-white{background:#fff;color:#000;} .btn-dark{background:#000;color:#fff;}
-    /* stat cards */
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
-    .fcard{border-radius:20px;padding:30px;}
-    .light .fcard{background:#fff;border:1px solid var(--hair-l);}
-    .stat .n{font-family:var(--disp);font-weight:500;font-size:52px;line-height:1;letter-spacing:-1.2px;color:var(--ink);}
-    .stat .l{font-family:var(--text);font-size:14px;color:var(--mute);margin-top:14px;line-height:1.45;}
-    /* before/after */
-    .ba{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:16px;margin-top:24px;}
-    .ba .col{background:var(--elevated);border-radius:20px;padding:28px;}
-    .ba .tg{font-family:var(--text);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;}
-    .ba .today .tg{color:var(--stone);} .ba .after .tg{color:#fff;}
-    .ba .after{background:var(--primary);}
-    .ba ul{margin:0;padding-left:20px;} .ba li{margin:10px 0;font-size:15px;color:var(--on-dark-mute);}
-    .ba .after li{color:rgba(255,255,255,.92);}
-    .arrow{display:flex;align-items:center;justify-content:center;color:var(--stone);}
-    /* what you'll see cards */
-    .cards{display:grid;gap:16px;margin-top:24px;}
-    .card{display:flex;gap:20px;border-radius:20px;padding:28px;background:#fff;border:1px solid var(--hair-l);}
-    .card.lead{background:var(--primary);border:none;color:#fff;}
-    .icon{flex:0 0 48px;height:48px;border-radius:9999px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--ink);}
-    .card.lead .icon{background:rgba(255,255,255,.18);color:#fff;}
-    .card h3{color:var(--ink);} .card.lead h3{color:#fff;}
-    .card p{margin:0;font-size:15px;color:var(--mute);line-height:1.5;}
-    .card.lead p{color:rgba(255,255,255,.85);}
-    .pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.02em;padding:3px 11px;border-radius:9999px;background:#fff;color:var(--primary);margin-left:10px;vertical-align:middle;}
-    /* sample = dark product-mockup inset inside the white band */
-    .mockup{background:var(--black);border-radius:28px;padding:34px 36px;margin-top:28px;color:#fff;}
-    .mockup .cap{font-family:var(--text);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--stone);margin-bottom:20px;}
-    .row{display:flex;align-items:center;gap:14px;font-size:15px;padding:13px 0;border-bottom:1px solid var(--hair-d);}
-    .row:last-of-type{border-bottom:none;}
-    .row .crit{flex:1;color:#fff;}
-    .b{font-size:12px;font-weight:600;letter-spacing:.02em;padding:4px 12px;border-radius:9999px;white-space:nowrap;}
-    .b.met{background:rgba(0,168,126,.16);color:#36d6a6;}
-    .b.flag{background:rgba(230,30,73,.16);color:#ff6286;}
-    .spot{margin-top:20px;font-size:15px;color:#fff;background:var(--elevated);border-radius:16px;padding:16px 20px;line-height:1.5;}
-    .spot b{color:#ff6286;}
-    /* honest note + chips on final dark band */
-    .note{background:var(--elevated);border-radius:20px;padding:24px 28px;font-size:15px;color:var(--on-dark-mute);line-height:1.55;margin-bottom:40px;}
-    .note b{color:#fff;}
-    .chips{display:flex;flex-direction:column;gap:12px;max-width:560px;margin:22px 0 32px;}
-    .chip{background:var(--elevated);border-radius:9999px;padding:14px 22px;font-size:15px;color:#fff;display:flex;align-items:center;gap:14px;}
-    .chip svg{color:var(--primary);flex:0 0 20px;}
-    footer{padding:36px 56px 48px;font-size:13px;color:var(--ash);line-height:1.7;background:#000;}
+    /* pills */
+    .pill{display:inline-block;font-family:var(--text);font-weight:500;font-size:16px;padding:15px 32px;border-radius:9999px;text-decoration:none;border:none;cursor:pointer;}
+    .pill-ink{background:var(--ink);color:#fff;}
+    .pill-white{background:#fff;color:var(--ink);}
+    .pill-cloud{background:var(--cloud);color:var(--ink);}
+    /* stats */
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px;}
+    .stat{background:var(--cloud);padding:30px 26px;}
+    .stat .n{font-family:var(--disp);font-weight:800;font-size:50px;line-height:.95;letter-spacing:-.01em;color:var(--ink);}
+    .stat .l{font-size:14px;color:var(--mute);margin-top:14px;line-height:1.45;}
+    /* shift */
+    .shift{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px;}
+    .col{padding:30px 28px;} .today{background:var(--cloud);} .after{background:var(--ink);color:#fff;}
+    .col .tg{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
+    .today .tg{color:var(--mute);} .after .tg{color:#fff;}
+    .col ul{margin:0;padding-left:18px;} .col li{margin:10px 0;font-size:15px;}
+    .today li{color:var(--charcoal);} .after li{color:rgba(255,255,255,.86);}
+    /* what you'll see */
+    .lead{background:var(--ink);color:#fff;padding:36px 32px;margin-top:22px;display:flex;gap:22px;align-items:flex-start;}
+    .lead .badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:#fff;padding:4px 12px;border-radius:9999px;margin-bottom:12px;}
+    .lead h3{color:#fff;font-size:22px;font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;}
+    .lead p{color:rgba(255,255,255,.82);margin:0;font-size:15px;}
+    .lead .icon{flex:0 0 52px;height:52px;border-radius:9999px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;}
+    .pcard{background:var(--canvas);}
+    .pcard .imgcell{background:var(--cloud);height:120px;display:flex;align-items:center;justify-content:center;color:var(--ink);}
+    .pcard .meta2{padding:16px 4px 4px;}
+    .pcard h3{margin:0 0 4px;}
+    .pcard p{margin:0;font-size:14px;color:var(--mute);line-height:1.5;}
+    /* sample readout */
+    .sample{margin-top:30px;border-top:1px solid var(--hair);}
+    .sample .cap{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding:18px 0 6px;}
+    .row{display:flex;align-items:center;gap:14px;font-size:15px;padding:15px 0;border-bottom:1px solid var(--hair);}
+    .row .crit{flex:1;color:var(--ink);font-weight:500;}
+    .sig{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;display:flex;align-items:center;gap:7px;}
+    .sig.met{color:var(--success);} .sig.flag{color:var(--sale);}
+    .spot{margin-top:20px;background:var(--cloud);padding:20px 24px;font-size:15px;line-height:1.55;color:var(--ink);}
+    .spot b{color:var(--sale);}
+    /* note */
+    .note{font-size:15px;line-height:1.6;color:var(--charcoal);border-top:1px solid var(--hair);padding-top:22px;}
+    .note b{color:var(--ink);}
+    /* cta chips */
+    .chips{display:flex;flex-direction:column;gap:8px;max-width:560px;margin:24px 0 32px;}
+    .chip{background:rgba(255,255,255,.10);padding:15px 22px;font-size:15px;color:#fff;display:flex;align-items:center;gap:14px;}
+    .chip svg{flex:0 0 20px;color:#fff;}
+    footer{padding:36px 56px 44px;font-size:12px;color:var(--mute);line-height:1.7;border-top:1px solid var(--hair);background:var(--canvas);}
     @media (max-width:680px){
-      .band{padding:48px 28px;} .stats{grid-template-columns:1fr;} .ba{grid-template-columns:1fr;}
-      .arrow{transform:rotate(90deg);} h1{font-size:42px;letter-spacing:-.8px;} h2{font-size:30px;}
+      .band,.campaign{padding:40px 24px;} .stats{grid-template-columns:1fr;} .shift{grid-template-columns:1fr;}
+      .cards{grid-template-columns:1fr;} .display{font-size:46px;} h2{font-size:26px;} .lead{flex-direction:column;}
     }
-    @media print{.dark,footer{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+    @media print{.campaign,.after,.lead{background:#111 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
   </style>
 </head>
 <body>
   <main class="page">
 
-    <!-- HERO — dark storytelling band -->
-    <section class="band dark">
-      <span class="badge">A demo built on your workflow</span>
-      <h1>See your own spine review — solved.</h1>
-      <p class="lede">Not a product tour. A 20-minute demo run on one of <b style="color:#fff">your</b>
-        actual cases — every reviewer starting from the same read of the same file.</p>
+    <!-- HERO — black campaign panel, billboard lockup -->
+    <section class="campaign">
+      <p class="kicker">A demo built on your workflow</p>
+      <h1 class="display">See your own<br>spine review.<br>Solved.</h1>
+      <p class="lede" style="margin-top:24px">Not a product tour. A 20-minute demo run on one of
+        <b style="color:#fff">your</b> actual cases — every reviewer starting from the same read of the same file.</p>
       <div class="meta">
         <span>Prepared for <b>Karen Whitfield</b> · Director of Utilization Review</span>
         <span>Veridian+ with Atlas</span>
       </div>
     </section>
 
-    <!-- WHAT WE HEARD — white catalogue band -->
-    <section class="band light">
+    <!-- WHAT WE HEARD -->
+    <section class="band">
       <p class="kicker">What you told us</p>
       <h2>The cost of reviewing by hand</h2>
       <div class="stats">
-        <div class="fcard stat"><div class="n">100–150</div><div class="l">pages in a complex spine packet — read by hand to find what matters</div></div>
-        <div class="fcard stat"><div class="n">3–4 hrs</div><div class="l">per complex file, with the first hour just orienting</div></div>
-        <div class="fcard stat"><div class="n">1 in 6</div><div class="l">complex cases where two reviewers reach different determinations</div></div>
+        <div class="stat"><div class="n">100–150</div><div class="l">pages in a complex spine packet — read by hand to find what matters</div></div>
+        <div class="stat"><div class="n">3–4 HRS</div><div class="l">per complex file, with the first hour just orienting</div></div>
+        <div class="stat"><div class="n">1 IN 6</div><div class="l">complex cases where two reviewers reach different determinations</div></div>
       </div>
     </section>
 
-    <!-- THE SHIFT — dark band -->
-    <section class="band dark">
+    <!-- THE SHIFT -->
+    <section class="band">
       <p class="kicker">The shift</p>
-      <h2>From hunting the file → one shared, cited read</h2>
-      <div class="ba">
+      <h2>From hunting the file to one shared, cited read</h2>
+      <div class="shift">
         <div class="col today">
           <div class="tg">Today</div>
           <ul><li>Every reviewer reads 140 pages alone</li><li>Criteria checked from memory, by hand</li><li>Determinations vary — driving a 6-week appeals backlog</li></ul>
         </div>
-        <div class="arrow"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
         <div class="col after">
           <div class="tg">In the demo</div>
           <ul><li>One structured, cited read of the same file</li><li>Each criterion: met / not met / not documented</li><li>Every reviewer starts from the same place</li></ul>
@@ -135,55 +133,62 @@
       </div>
     </section>
 
-    <!-- WHAT YOU'LL SEE — white band with cobalt featured lead card + dark mockup -->
-    <section class="band light">
+    <!-- WHAT YOU'LL SEE -->
+    <section class="band">
       <p class="kicker">What you'll see — on your own case</p>
       <h2>Three things, in 20 minutes</h2>
-      <div class="cards">
-        <div class="card lead">
-          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <div><h3>Medical-necessity checklist on your spine case <span class="pill">The main event</span></h3>
-            <p>Your written criteria run against your own de-identified packet — criterion by criterion, each cited to the page. The same starting read for every reviewer.</p></div>
-        </div>
-        <div class="card">
-          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h6"/></svg></div>
-          <div><h3>A one-page brief of a 140-page file</h3>
-            <p>The hour of orientation becomes a cited summary in seconds — onset, conservative therapy, imaging — pulled from the whole packet.</p></div>
-        </div>
-        <div class="card">
-          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="7"/></svg></div>
-          <div><h3>"How did we decide this before?"</h3>
-            <p>Compare a new submission against a prior case — what's consistent, what diverges. A starting answer to the question you can never answer fast.</p></div>
+
+      <div class="lead">
+        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div>
+          <span class="badge">The main event</span>
+          <h3>Medical-necessity checklist on your spine case</h3>
+          <p>Your written criteria run against your own de-identified packet — criterion by criterion, each cited to the page. The same starting read for every reviewer.</p>
         </div>
       </div>
 
-      <!-- SAMPLE OUTPUT — dark product-mockup inset; accent colours allowed here -->
-      <div class="mockup">
+      <div class="cards">
+        <div class="pcard">
+          <div class="imgcell"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h6"/></svg></div>
+          <div class="meta2"><h3>A one-page brief of a 140-page file</h3><p>The hour of orientation becomes a cited summary in seconds — onset, conservative therapy, imaging.</p></div>
+        </div>
+        <div class="pcard">
+          <div class="imgcell"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="7"/></svg></div>
+          <div class="meta2"><h3>"How did we decide this before?"</h3><p>Compare a new submission against a prior case — what's consistent, what diverges.</p></div>
+        </div>
+      </div>
+
+      <!-- SAMPLE READOUT — colour reserved for signal: success green / sale red -->
+      <div class="sample">
         <div class="cap">A peek at the checklist output — synthetic L4–L5 fusion packet</div>
-        <div class="row"><span class="crit">Symptom duration</span><span class="b met">Met</span></div>
-        <div class="row"><span class="crit">Imaging–symptom correlation</span><span class="b met">Met</span></div>
-        <div class="row"><span class="crit">Instability / fusion indication</span><span class="b met">Met</span></div>
-        <div class="row"><span class="crit">Conservative therapy — minimum duration</span><span class="b flag">Not documented</span></div>
+        <div class="row"><span class="crit">Symptom duration</span><span class="sig met">Met</span></div>
+        <div class="row"><span class="crit">Imaging–symptom correlation</span><span class="sig met">Met</span></div>
+        <div class="row"><span class="crit">Instability / fusion indication</span><span class="sig met">Met</span></div>
+        <div class="row"><span class="crit">Conservative therapy — minimum duration</span><span class="sig flag">Not documented</span></div>
         <div class="spot"><b>The moment that lands:</b> the evidence was buried on page 90 and a handwritten
           note on page 43 — exactly the miss your blind-review study caught. The checklist flags it and
           cites it, so the reviewer confirms in one click.</div>
       </div>
     </section>
 
-    <!-- HONEST NOTE + CTA — final dark band -->
-    <section class="band dark">
+    <!-- HONEST NOTE -->
+    <section class="band">
       <div class="note"><b>Straight with you:</b> the output is an analytical aid, not a coverage
         determination — your reviewers make the call. And the real work is structuring your criteria
         first; we'll scope that honestly, with a clinical owner on your side.</div>
+    </section>
+
+    <!-- CTA — black campaign panel -->
+    <section class="campaign">
       <p class="kicker">Next step</p>
-      <h2>Bring one case. We'll run the demo on it.</h2>
-      <p class="lede">So you see your own workflow solved — not a generic deck you have to translate.</p>
+      <h2 class="display" style="font-size:48px">Bring one case.<br>We'll run the demo on it.</h2>
+      <p class="lede" style="margin-top:22px">So you see your own workflow solved — not a generic deck you have to translate.</p>
       <div class="chips">
         <span class="chip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>One de-identified spine packet</span>
         <span class="chip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/></svg>Your written spine criteria (messy is fine)</span>
         <span class="chip"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>Legal on the call — we'll repeat the "analytical aid" line</span>
       </div>
-      <a class="btn btn-white" href="#">Schedule the demo</a>
+      <a class="pill pill-white" href="#">Schedule the demo</a>
     </section>
 
     <footer>

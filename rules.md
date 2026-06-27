@@ -97,15 +97,14 @@ escalates go on to stages 04–06.
   with an outcome headline in their language; show their pain as a few punchy stats; show a
   before→after; show "what you'll see" as a small set of capability cards (each a pain solved
   on their own material) with a compact visual peek at the lead's output; keep the honest gate
-  to one short block; close with a visual call-to-action for what to bring. **Visual theme: a modern fintech-brochure
-  look — a two-mode canvas that alternates true-black storytelling bands with white catalogue
-  bands, large mixed-case display headlines, pill buttons, rounded-20 cards, depth via band
-  switches and surface luminance (no shadows). Cobalt-violet (`#494fdf`) is the one brand stamp,
-  reserved for the single featured "main event" card and the hero badge; the white pill is the
-  primary CTA on dark; the accent colours (teal/pink/green) appear only inside the dark
-  sample-output mockup, never as buttons.** Inline CSS + inline SVG, no external assets,
-  print-friendly, opens in any browser. (The skeleton in `output-templates/06_preview.html`
-  already encodes this theme — build on it and just replace the content.)
+  to one short block; close with a visual call-to-action for what to bring. **Visual theme: athletic-editorial commerce
+  — "billboard above, catalog below." Towering UPPERCASE display lockups on solid-black campaign
+  panels (the hero and the closing CTA), then an austere black / white / single-gray (`#f5f5f5`)
+  catalog: pill CTAs, flat zero-radius cards, an 8px grid, hairline dividers, no shadows. Reserve
+  colour for SIGNAL ONLY — success green (`#007d48`) and sale red (`#d30005`) appear only in the
+  sample-output readout (met / not documented); everything else is black/white/gray.** Inline CSS
+  + inline SVG, no external assets, print-friendly, opens in any browser. (The skeleton in
+  `output-templates/06_preview.html` already encodes this theme — build on it and just replace the content.)
 - **Draws on.** The stage 03 recommendation and the stage 04 plan for content.
 - **Fills.** `reference/output-templates/06_preview.html`.
 - **Stop/continue.** Final stage. Hand the preview to the rep to send.
