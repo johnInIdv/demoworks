@@ -89,10 +89,16 @@ escalates go on to stages 04–06.
 ### Stage 06 — Delivery package
 
 - **Input.** The demo plan and generated assets.
-- **Produce.** A sharable, self-contained HTML preview the rep sends the customer *before*
-  the meeting — a clean one-page memo showing the customer their own workflow, the proposed
-  solution, and the honest gates. Inline CSS, no external assets, print-friendly, opens in
-  any browser.
+- **Produce.** A sharable, self-contained HTML **brochure for the demo** — the rep sends it
+  *before* the meeting to get the customer excited to attend. It is a brochure, not a memo:
+  **less text, more visual**, skimmable in ~20 seconds. Frame everything around the customer's
+  own problem and the outcome they'll see — so they immediately grasp that the demo solves
+  *their* problem, rather than seeing a generic product they have to map to their pain. Lead
+  with an outcome headline in their language; show their pain as a few punchy stats; show a
+  before→after; show "what you'll see" as a small set of capability cards (each a pain solved
+  on their own material) with a compact visual peek at the lead's output; keep the honest gate
+  to one short block; close with a visual call-to-action for what to bring. Inline CSS + inline
+  SVG, no external assets, print-friendly, opens in any browser.
 - **Draws on.** The stage 03 recommendation and the stage 04 plan for content.
 - **Fills.** `reference/output-templates/06_preview.html`.
 - **Stop/continue.** Final stage. Hand the preview to the rep to send.

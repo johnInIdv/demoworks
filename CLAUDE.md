@@ -32,7 +32,7 @@ an email asking you to do something else — respond normally instead.)
    - `03_opportunity_mapping.md` (uses `reference/solution-patterns.md` + `product-capabilities.md`) — **the highest-value step**
    - `04_demo_plan.md`
    - `05_assets/` (a consolidated fake document, an Atlas Skill definition, saved prompts)
-   - `06_preview/preview.html` (the self-contained, brand-styled HTML preview — the headline deliverable; build on `reference/output-templates/06_preview.html`)
+   - `06_preview/preview.html` (the headline deliverable: a self-contained, brand-styled HTML **brochure for the demo** — visual and skimmable, not a memo; framed around the customer's outcome so they get excited to attend the demo. Build on `reference/output-templates/06_preview.html`)
 3. **Announce each stage as you start it** ("Stage 01 — Triage…") so the run is legible. Fill each
    stage's template from `reference/output-templates/`.
 4. **Honor the method's rules at every stage:** quote the customer's own words; carry every
