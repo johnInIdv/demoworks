@@ -97,8 +97,12 @@ escalates go on to stages 04–06.
   with an outcome headline in their language; show their pain as a few punchy stats; show a
   before→after; show "what you'll see" as a small set of capability cards (each a pain solved
   on their own material) with a compact visual peek at the lead's output; keep the honest gate
-  to one short block; close with a visual call-to-action for what to bring. Inline CSS + inline
-  SVG, no external assets, print-friendly, opens in any browser.
+  to one short block; close with a visual call-to-action for what to bring. **Visual theme: dark luxury —
+  true-black canvas, gold (`#FFC000`) accent, uppercase display type, zero border-radius,
+  depth via surface layering (no shadows); reserve gold for the CTA, section kickers, key stat
+  numbers, and the single "moment that lands" highlight.** Inline CSS + inline SVG, no external
+  assets, print-friendly, opens in any browser. (The skeleton in `output-templates/06_preview.html`
+  already encodes this theme — build on it and just replace the content.)
 - **Draws on.** The stage 03 recommendation and the stage 04 plan for content.
 - **Fills.** `reference/output-templates/06_preview.html`.
 - **Stop/continue.** Final stage. Hand the preview to the rep to send.
