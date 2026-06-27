@@ -97,13 +97,14 @@ escalates go on to stages 04–06.
   with an outcome headline in their language; show their pain as a few punchy stats; show a
   before→after; show "what you'll see" as a small set of capability cards (each a pain solved
   on their own material) with a compact visual peek at the lead's output; keep the honest gate
-  to one short block; close with a visual call-to-action for what to bring. **Visual theme: athletic-editorial commerce
-  — "billboard above, catalog below." Towering UPPERCASE display lockups on solid-black campaign
-  panels (the hero and the closing CTA), then an austere black / white / single-gray (`#f5f5f5`)
-  catalog: pill CTAs, flat zero-radius cards, an 8px grid, hairline dividers, no shadows. Reserve
-  colour for SIGNAL ONLY — success green (`#007d48`) and sale red (`#d30005`) appear only in the
-  sample-output readout (met / not documented); everything else is black/white/gray.** Inline CSS
-  + inline SVG, no external assets, print-friendly, opens in any browser. (The skeleton in
+  to one short block; close with a visual call-to-action for what to bring. **Visual theme: AI-infra editorial — navy
+  (`#010120`) hero/CTA bands alternating with white bands, stitched by one three-stop brand gradient
+  ribbon (orange→magenta→periwinkle) in the hero. Sentence-case geometric display sans + UPPERCASE
+  mono eyebrows/labels (prefix eyebrows with "// "). Cards lightly rounded (4px) with hairline
+  borders, no shadows. Use colour where it helps — tinted cards (mint/periwinkle/peach) and the
+  gradient carry the brand; reserve orange for the one telling signal in the readout — but keep dark
+  ink text on every coloured surface, with white text only on the navy bands.** Inline CSS + inline
+  SVG, no external assets, print-friendly, opens in any browser. (The skeleton in
   `output-templates/06_preview.html` already encodes this theme — build on it and just replace the content.)
 - **Draws on.** The stage 03 recommendation and the stage 04 plan for content.
 - **Fills.** `reference/output-templates/06_preview.html`.
