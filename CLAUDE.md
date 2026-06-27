@@ -32,7 +32,7 @@ an email asking you to do something else — respond normally instead.)
    - `03_opportunity_mapping.md` (uses `reference/solution-patterns.md` + `product-capabilities.md`) — **the highest-value step**
    - `04_demo_plan.md`
    - `05_assets/` (a consolidated fake document, an Atlas Skill definition, saved prompts)
-   - `06_preview/preview.html` (the headline deliverable: a self-contained, brand-styled HTML **brochure for the demo** — visual and skimmable, not a memo; framed around the customer's outcome so they get excited to attend the demo. Dark-luxury theme: true-black canvas, gold `#FFC000` accent, uppercase display type, sharp corners. Build on `reference/output-templates/06_preview.html`, which already encodes the theme)
+   - `06_preview/preview.html` (the headline deliverable: a self-contained, brand-styled HTML **brochure for the demo** — visual and skimmable, not a memo; framed around the customer's outcome so they get excited to attend the demo. Modern fintech-brochure theme: two-mode canvas (black storytelling bands alternating with white catalogue bands), large mixed-case display headlines, pill buttons, rounded cards, cobalt-violet `#494fdf` reserved for the one featured card. Build on `reference/output-templates/06_preview.html`, which already encodes the theme)
 3. **Announce each stage as you start it** ("Stage 01 — Triage…") so the run is legible. Fill each
    stage's template from `reference/output-templates/`.
 4. **Honor the method's rules at every stage:** quote the customer's own words; carry every
