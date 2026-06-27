@@ -1,17 +1,16 @@
 <!-- Stage 06 — Delivery Package: pre-demo BROCHURE skeleton.
-     Visual theme: AI-infra editorial — navy (#010120) hero/CTA bands alternating with white bands,
-     stitched by ONE three-stop brand gradient ribbon (orange #fc4c02 → magenta #ef2cc1 → periwinkle
-     #bdbbff) in the hero. Sentence-case geometric display sans throughout; section eyebrows are
-     small UPPERCASE sans (no "//" marks). The mono face is kept only for the small column/card tags
-     and table-header labels. Cards lightly rounded (4px) with hairline borders, no shadows.
+     Layout: AI-infra editorial — dark hero/CTA bands alternating with white bands, a gradient ribbon
+     in the hero, tinted stat tiles, a data-table readout, a faint wordmark sign-off.
+     Palette: athletic-retail — ink black (#111) dark bands, white + soft-cloud gray (#f5f5f5) catalog,
+     colour reserved for SIGNAL (sale red #d30005 / success green #007d48) plus ONE editorial gradient
+     ribbon in brand accents (pink #ed1aa0 → purple #beaffd → teal #0a7281). Soft accent tints
+     (pink-soft #ffb0dd / purple-pale #d6d1ff / purple-soft #beaffd) on stat tiles; the featured card
+     flips to solid black. Sentence-case display sans; section eyebrows are small UPPERCASE sans (no
+     "//" marks); mono kept only for small card tags + the table header. Cards 4px rounded, hairline
+     borders, no shadows. Dark ink text on every coloured surface; white text only on black.
      Self-contained: inline CSS + inline SVG, no external assets, print-friendly.
      GOAL: a brochure for the DEMO, not a memo. Less text, more visual. Skimmable in ~20 seconds.
-     Frame everything around the CUSTOMER'S problem and the outcome they'll see — so they grasp that
-     the demo solves THEIR problem, not a generic product they must map to their pain.
-     COLOUR DISCIPLINE: use colour where it helps — tinted cards (mint #c8f6f9 / periwinkle #bdbbff /
-     peach #ffe1d6) and the gradient ribbon carry the brand; reserve orange (#fc4c02) for the ONE
-     telling signal in the readout. Keep DARK INK text on every coloured surface — white text only on
-     the navy bands, never on the pastels or the gradient.
+     Frame everything around the CUSTOMER'S problem and the outcome they'll see.
      Replace every [bracketed placeholder]. Keep prose short; let the structure carry the message. -->
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +20,10 @@
   <title>[Customer name] — Your Demo Preview</title>
   <style>
     :root{
-      --navy:#010120; --dark-soft:#313641; --ink:#000; --canvas:#fff;
-      --hair:#ebebeb; --body:#6b6b6b; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.72);
-      --orange:#fc4c02; --magenta:#ef2cc1; --peri:#bdbbff; --mint:#c8f6f9;
+      --ink:#111111; --canvas:#fff; --cloud:#f5f5f5; --charcoal:#39393b;
+      --mute:#707072; --stone:#9e9ea0; --hair:#e5e5e5; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.74);
+      --sale:#d30005; --success:#007d48;
+      --pink:#ed1aa0; --pink-soft:#ffb0dd; --purple-soft:#beaffd; --purple-pale:#d6d1ff; --teal:#0a7281;
       --disp:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
       --mono:ui-monospace,"SF Mono","Menlo","Roboto Mono",monospace;
     }
@@ -31,64 +31,65 @@
     body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--disp);font-size:16px;line-height:1.4;-webkit-font-smoothing:antialiased;letter-spacing:-.16px;}
     .page{max-width:1000px;margin:0 auto;}
     .band{padding:64px 56px;}
-    .navy{background:var(--navy);color:var(--on-dark);}
+    .navy{background:var(--ink);color:var(--on-dark);}
     h1{font-weight:500;font-size:60px;line-height:1.06;letter-spacing:-1.8px;margin:0 0 22px;}
     h2{font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.8px;margin:0 0 8px;}
     h3{font-weight:500;font-size:22px;line-height:1.15;letter-spacing:-.22px;margin:0 0 6px;}
     p{margin:0 0 14px;}
-    .eyebrow{font-family:var(--disp);text-transform:uppercase;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--orange);margin:0 0 18px;}
-    .navy .eyebrow{color:var(--mint);}
+    .eyebrow{font-family:var(--disp);text-transform:uppercase;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--mute);margin:0 0 18px;}
+    .navy .eyebrow{color:var(--stone);}
     .lede{font-size:18px;line-height:1.45;letter-spacing:-.18px;color:#3a3a3a;max-width:60ch;}
     .navy .lede{color:var(--on-dark-mute);}
     .meta{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--on-dark-mute);display:flex;gap:22px;flex-wrap:wrap;}
     .meta b{color:#fff;font-weight:500;}
     .ribbon{margin-top:34px;width:100%;height:120px;border-radius:4px;overflow:hidden;}
-    .btn{display:inline-block;font-family:var(--mono);text-transform:uppercase;font-size:14px;font-weight:500;letter-spacing:.04em;padding:13px 26px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;}
-    .btn-mint{background:var(--mint);color:var(--ink);} .btn-ink{background:var(--ink);color:#fff;}
+    .btn{display:inline-block;font-family:var(--mono);text-transform:uppercase;font-size:14px;font-weight:500;letter-spacing:.04em;padding:14px 28px;border-radius:9999px;text-decoration:none;border:none;cursor:pointer;}
+    .btn-white{background:#fff;color:var(--ink);} .btn-ink{background:var(--ink);color:#fff;}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;}
     .stat{border-radius:4px;padding:30px 26px;color:var(--ink);}
-    .stat.s1{background:var(--mint);} .stat.s2{background:var(--peri);} .stat.s3{background:#ffe1d6;}
+    .stat.s1{background:var(--pink-soft);} .stat.s2{background:var(--purple-pale);} .stat.s3{background:var(--purple-soft);}
     .stat .n{font-weight:500;font-size:46px;line-height:1;letter-spacing:-1.2px;}
     .stat .l{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.06em;color:#3a3a3a;margin-top:16px;line-height:1.5;}
     .shift{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
     .col{border-radius:4px;padding:28px;}
-    .today{background:var(--dark-soft);color:var(--on-dark);} .after{background:var(--peri);color:var(--ink);}
+    .today{background:var(--charcoal);color:var(--on-dark);}
+    .after{background:#fff;color:var(--ink);border-top:3px solid var(--success);}
     .col .tg{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.1em;margin-bottom:16px;}
-    .today .tg{color:var(--mint);} .after .tg{color:#2a2a6a;}
+    .today .tg{color:var(--stone);} .after .tg{color:var(--success);}
     .col ul{margin:0;padding-left:18px;} .col li{margin:10px 0;font-size:15px;letter-spacing:-.16px;}
     .today li{color:rgba(255,255,255,.85);}
-    .lead{background:var(--mint);color:var(--ink);border-radius:4px;padding:32px;margin-top:24px;display:flex;gap:22px;align-items:flex-start;}
-    .lead .icon{flex:0 0 50px;height:50px;border-radius:4px;background:rgba(0,0,0,.10);display:flex;align-items:center;justify-content:center;color:var(--ink);}
-    .lead .tag{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.08em;color:#0a6b73;margin-bottom:10px;}
-    .lead p{margin:0;font-size:15px;color:#234;}
+    .lead{background:var(--ink);color:var(--on-dark);border-radius:4px;padding:32px;margin-top:24px;display:flex;gap:22px;align-items:flex-start;}
+    .lead .icon{flex:0 0 50px;height:50px;border-radius:4px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;color:#fff;}
+    .lead .tag{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.08em;color:var(--pink-soft);margin-bottom:10px;}
+    .lead h3{color:#fff;} .lead p{margin:0;font-size:15px;color:var(--on-dark-mute);}
     .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
     .card{border:1px solid var(--hair);border-radius:4px;padding:26px;background:#fff;}
-    .card .tag{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.08em;color:var(--body);margin-bottom:12px;}
-    .card p{margin:0;font-size:14px;color:var(--body);line-height:1.5;}
+    .card .tag{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.08em;color:var(--mute);margin-bottom:12px;}
+    .card p{margin:0;font-size:14px;color:var(--mute);line-height:1.5;}
     .sample{margin-top:30px;border:1px solid var(--hair);border-radius:4px;overflow:hidden;}
-    .sample .cap{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.1em;color:var(--body);background:var(--hair);padding:12px 18px;}
+    .sample .cap{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:.1em;color:var(--mute);background:var(--cloud);padding:12px 18px;}
     .row{display:flex;align-items:center;gap:14px;font-size:15px;padding:14px 18px;border-bottom:1px solid var(--hair);}
     .row:last-of-type{border-bottom:none;}
     .row .crit{flex:1;color:var(--ink);}
     .sig{font-family:var(--mono);text-transform:uppercase;font-size:12px;font-weight:500;letter-spacing:.04em;}
-    .sig.met{color:#0a7d52;} .sig.flag{color:var(--orange);}
-    .spot{margin-top:18px;background:var(--peri);border-radius:4px;padding:18px 22px;font-size:15px;line-height:1.5;color:#1c1c3a;}
-    .spot b{color:#7a0a52;}
+    .sig.met{color:var(--success);} .sig.flag{color:var(--sale);}
+    .spot{margin-top:18px;background:var(--cloud);border-radius:4px;padding:18px 22px;font-size:15px;line-height:1.5;color:var(--ink);}
+    .spot b{color:var(--sale);}
     .note{font-size:15px;line-height:1.6;color:#3a3a3a;border-top:1px solid var(--hair);padding-top:22px;}
     .note b{color:var(--ink);}
     .chips{display:flex;flex-direction:column;gap:10px;max-width:560px;margin:24px 0 32px;}
-    .chip{background:var(--dark-soft);border-radius:4px;padding:14px 20px;font-size:14px;color:#fff;display:flex;align-items:center;gap:14px;}
-    .chip svg{flex:0 0 18px;color:var(--mint);}
+    .chip{background:var(--charcoal);border-radius:4px;padding:14px 20px;font-size:14px;color:#fff;display:flex;align-items:center;gap:14px;}
+    .chip svg{flex:0 0 18px;color:#fff;}
     .wordmark{font-weight:500;font-size:118px;letter-spacing:-4px;color:var(--hair);line-height:.9;padding:30px 56px 8px;overflow:hidden;}
-    footer{padding:8px 56px 40px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--body);line-height:1.8;text-transform:uppercase;}
+    footer{padding:8px 56px 40px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mute);line-height:1.8;text-transform:uppercase;}
     @media (max-width:680px){.band,.navy{padding:44px 24px;}.stats,.shift,.cards{grid-template-columns:1fr;}h1{font-size:40px;letter-spacing:-1px;}h2{font-size:28px;}.lead{flex-direction:column;}.wordmark{font-size:54px;letter-spacing:-2px;padding:24px;}}
-    @media print{.navy,.today{background:#010120 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+    @media print{.navy,.today,.lead{background:#111 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
   </style>
 </head>
 <body>
   <main class="page">
 
-    <!-- HERO — navy band + gradient ribbon. Headline = the result THEY get, sentence case. -->
+    <!-- HERO — black band + gradient ribbon. Headline = the result THEY get, sentence case. -->
     <section class="band navy">
       <p class="eyebrow">A demo built on your workflow</p>
       <h1>[Outcome headline — e.g. "See your own [workflow] — solved."]</h1>
@@ -98,11 +99,11 @@
         <span>[Product name]</span>
       </div>
       <svg class="ribbon" viewBox="0 0 1000 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brand gradient ribbon">
-        <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fc4c02"/><stop offset="50%" stop-color="#ef2cc1"/><stop offset="100%" stop-color="#bdbbff"/></linearGradient></defs>
-        <rect width="1000" height="120" fill="#010120"/>
+        <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ed1aa0"/><stop offset="50%" stop-color="#beaffd"/><stop offset="100%" stop-color="#0a7281"/></linearGradient></defs>
+        <rect width="1000" height="120" fill="#111111"/>
         <path d="M0,86 C220,40 360,118 540,74 C720,30 860,96 1000,58 L1000,120 L0,120 Z" fill="url(#grad)" opacity="0.95"/>
-        <path d="M0,104 C200,72 380,128 560,96 C760,60 880,112 1000,84 L1000,120 L0,120 Z" fill="url(#grad)" opacity="0.55"/>
-        <path d="M0,64 C180,30 340,84 520,52 C700,22 880,70 1000,44" fill="none" stroke="url(#grad)" stroke-width="2.5" opacity="0.8"/>
+        <path d="M0,104 C200,72 380,128 560,96 C760,60 880,112 1000,84 L1000,120 L0,120 Z" fill="url(#grad)" opacity="0.5"/>
+        <path d="M0,64 C180,30 340,84 520,52 C700,22 880,70 1000,44" fill="none" stroke="url(#grad)" stroke-width="2.5" opacity="0.85"/>
       </svg>
     </section>
 
@@ -117,17 +118,17 @@
       </div>
     </section>
 
-    <!-- THE SHIFT — navy band. today (dark-soft) vs in-demo (periwinkle, ink text). -->
+    <!-- THE SHIFT — black band. today (charcoal) vs in-demo (white card, green top accent). -->
     <section class="band navy">
       <p class="eyebrow">The shift</p>
       <h2>[From [today's pain] to [the better state]]</h2>
       <div class="shift">
-        <div class="col today"><div class="tg">// Today</div><ul><li>[pain]</li><li>[pain]</li><li>[downstream cost]</li></ul></div>
-        <div class="col after"><div class="tg">// In the demo</div><ul><li>[better]</li><li>[better]</li><li>[better]</li></ul></div>
+        <div class="col today"><div class="tg">Today</div><ul><li>[pain]</li><li>[pain]</li><li>[downstream cost]</li></ul></div>
+        <div class="col after"><div class="tg">In the demo</div><ul><li>[better]</li><li>[better]</li><li>[better]</li></ul></div>
       </div>
     </section>
 
-    <!-- WHAT YOU'LL SEE — white band. lead = mint card (ink text); supporting = hairline cards. -->
+    <!-- WHAT YOU'LL SEE — white band. lead = black card (white text); supporting = hairline cards. -->
     <section class="band">
       <p class="eyebrow">What you'll see — on your own [case/data]</p>
       <h2>[N] things, in [duration]</h2>
@@ -135,18 +136,18 @@
       <div class="lead">
         <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
         <div>
-          <div class="tag">// The main event</div>
+          <div class="tag">The main event</div>
           <h3>[Lead capability, framed as their outcome]</h3>
           <p>[One short line: what it shows on their own material.]</p>
         </div>
       </div>
 
       <div class="cards">
-        <div class="card"><div class="tag">// [label]</div><h3>[Supporting capability]</h3><p>[One short line.]</p></div>
-        <div class="card"><div class="tag">// [label]</div><h3>[Supporting capability]</h3><p>[One short line.]</p></div>
+        <div class="card"><div class="tag">[label]</div><h3>[Supporting capability]</h3><p>[One short line.]</p></div>
+        <div class="card"><div class="tag">[label]</div><h3>[Supporting capability]</h3><p>[One short line.]</p></div>
       </div>
 
-      <!-- SAMPLE READOUT — data table. orange .sig.flag for the ONE telling finding; green .sig.met for the rest. -->
+      <!-- SAMPLE READOUT — data table. sale red .sig.flag for the ONE telling finding; success green .sig.met for the rest. -->
       <div class="sample">
         <div class="cap">[Caption — what this peek shows, on a synthetic file]</div>
         <div class="row"><span class="crit">[item]</span><span class="sig met">[Status]</span></div>
@@ -161,7 +162,7 @@
       <div class="note"><b>Straight with you:</b> [the analytical-aid line + the dominant deployment gate, in one or two sentences].</div>
     </section>
 
-    <!-- CTA — navy band; chips + mint button. -->
+    <!-- CTA — black band; chips + white button. -->
     <section class="band navy">
       <p class="eyebrow">Next step</p>
       <h2>[Action-oriented close, e.g. "Bring one [case]. We'll run the demo on it."]</h2>
@@ -171,7 +172,7 @@
         <span class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/></svg>[what to bring]</span>
         <span class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>[who to include / a condition]</span>
       </div>
-      <a class="btn btn-mint" href="#">[Call to action — e.g. Schedule the demo]</a>
+      <a class="btn btn-white" href="#">[Call to action — e.g. Schedule the demo]</a>
     </section>
 
     <!-- FOOTER wordmark banner — faint giant product/company wordmark stencil. -->
