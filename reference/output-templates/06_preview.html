@@ -1,8 +1,9 @@
 <!-- Stage 06 — Delivery Package: pre-demo BROCHURE skeleton.
      Visual theme: AI-infra editorial — navy (#010120) hero/CTA bands alternating with white bands,
      stitched by ONE three-stop brand gradient ribbon (orange #fc4c02 → magenta #ef2cc1 → periwinkle
-     #bdbbff) in the hero. Sentence-case geometric display sans + UPPERCASE mono eyebrows/labels
-     (prefix eyebrows with "// "). Cards lightly rounded (4px) with hairline borders, no shadows.
+     #bdbbff) in the hero. Sentence-case geometric display sans throughout; section eyebrows are
+     small UPPERCASE sans (no "//" marks). The mono face is kept only for the small column/card tags
+     and table-header labels. Cards lightly rounded (4px) with hairline borders, no shadows.
      Self-contained: inline CSS + inline SVG, no external assets, print-friendly.
      GOAL: a brochure for the DEMO, not a memo. Less text, more visual. Skimmable in ~20 seconds.
      Frame everything around the CUSTOMER'S problem and the outcome they'll see — so they grasp that
@@ -35,7 +36,7 @@
     h2{font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.8px;margin:0 0 8px;}
     h3{font-weight:500;font-size:22px;line-height:1.15;letter-spacing:-.22px;margin:0 0 6px;}
     p{margin:0 0 14px;}
-    .eyebrow{font-family:var(--mono);text-transform:uppercase;font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--orange);margin:0 0 18px;}
+    .eyebrow{font-family:var(--disp);text-transform:uppercase;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--orange);margin:0 0 18px;}
     .navy .eyebrow{color:var(--mint);}
     .lede{font-size:18px;line-height:1.45;letter-spacing:-.18px;color:#3a3a3a;max-width:60ch;}
     .navy .lede{color:var(--on-dark-mute);}
@@ -89,7 +90,7 @@
 
     <!-- HERO — navy band + gradient ribbon. Headline = the result THEY get, sentence case. -->
     <section class="band navy">
-      <p class="eyebrow">// A demo built on your workflow</p>
+      <p class="eyebrow">A demo built on your workflow</p>
       <h1>[Outcome headline — e.g. "See your own [workflow] — solved."]</h1>
       <p class="lede">[One sentence: a short demo on THEIR own [case/document], not a product tour.]</p>
       <div class="meta">
@@ -107,7 +108,7 @@
 
     <!-- WHAT WE HEARD — white band, tinted stat tiles (dark ink text). -->
     <section class="band">
-      <p class="eyebrow">// What you told us</p>
+      <p class="eyebrow">What you told us</p>
       <h2>[One-line framing of the pain]</h2>
       <div class="stats">
         <div class="stat s1"><div class="n">[stat]</div><div class="l">[what it measures, in their words]</div></div>
@@ -118,7 +119,7 @@
 
     <!-- THE SHIFT — navy band. today (dark-soft) vs in-demo (periwinkle, ink text). -->
     <section class="band navy">
-      <p class="eyebrow">// The shift</p>
+      <p class="eyebrow">The shift</p>
       <h2>[From [today's pain] to [the better state]]</h2>
       <div class="shift">
         <div class="col today"><div class="tg">// Today</div><ul><li>[pain]</li><li>[pain]</li><li>[downstream cost]</li></ul></div>
@@ -128,7 +129,7 @@
 
     <!-- WHAT YOU'LL SEE — white band. lead = mint card (ink text); supporting = hairline cards. -->
     <section class="band">
-      <p class="eyebrow">// What you'll see — on your own [case/data]</p>
+      <p class="eyebrow">What you'll see — on your own [case/data]</p>
       <h2>[N] things, in [duration]</h2>
 
       <div class="lead">
@@ -162,7 +163,7 @@
 
     <!-- CTA — navy band; chips + mint button. -->
     <section class="band navy">
-      <p class="eyebrow">// Next step</p>
+      <p class="eyebrow">Next step</p>
       <h2>[Action-oriented close, e.g. "Bring one [case]. We'll run the demo on it."]</h2>
       <p class="lede">[One line: so they see their own workflow solved, not a generic deck.]</p>
       <div class="chips">
