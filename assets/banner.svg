@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="DemoWorks — turns a discovery-call transcript into a tailored, working demo">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ed1aa0"/>
+      <stop offset="55%" stop-color="#beaffd"/>
+      <stop offset="100%" stop-color="#37c2cf"/>
+    </linearGradient>
+    <style>
+      .wm{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;}
+      .sans{font-family:'Helvetica Neue',Arial,sans-serif;}
+      .mono{font-family:'SF Mono','Menlo','Consolas',monospace;}
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="#111111"/>
+
+  <!-- wordmark -->
+  <text class="wm" x="64" y="132" font-size="82" letter-spacing="-2" fill="url(#grad)">DemoWorks</text>
+
+  <!-- tagline -->
+  <text class="sans" x="66" y="180" font-size="25" fill="#d7d7da">Turns a discovery-call transcript into a tailored, working product demo.</text>
+
+  <!-- pipeline line -->
+  <text class="mono" x="66" y="252" font-size="19" fill="#8a8a8e" letter-spacing="0.5">01 Triage<tspan fill="#8a8a8e">  →  </tspan>02 Workflow<tspan fill="#8a8a8e">  →  </tspan><tspan fill="#ffb0dd">03 Opportunity</tspan><tspan fill="#8a8a8e">  →  </tspan>04 Plan<tspan fill="#8a8a8e">  →  </tspan>05 Assets<tspan fill="#8a8a8e">  →  </tspan>06 Preview</text>
+
+  <!-- play cue -->
+  <circle cx="86" cy="318" r="22" fill="#ffffff"/>
+  <path d="M79 307 L79 329 L99 318 Z" fill="#111111"/>
+  <text class="sans" x="122" y="326" font-size="23" font-weight="600" fill="#ffffff">Watch the 90-second walkthrough</text>
+
+  <!-- gradient ribbon -->
+  <g>
+    <path d="M0,372 C220,344 360,398 540,372 C720,346 860,394 1200,360 L1200,420 L0,420 Z" fill="url(#grad)" opacity="0.95"/>
+    <path d="M0,392 C200,372 380,410 560,392 C760,366 940,402 1200,384 L1200,420 L0,420 Z" fill="url(#grad)" opacity="0.5"/>
+  </g>
+</svg>

@@ -2,6 +2,12 @@
 
 Turns a customer discovery-call transcript into a tailored, working product demo.
 
+[![DemoWorks — watch the 90-second walkthrough](assets/banner.svg)](https://johninidv.github.io/demoworks/walkthrough/)
+
+**▶ [Watch the 90-second walkthrough](https://johninidv.github.io/demoworks/walkthrough/)** (narrated) &nbsp;·&nbsp; **[See a finished demo preview](https://johninidv.github.io/demoworks/examples/summit-ridge-health-plan/06_preview/preview.html)** &nbsp;·&nbsp; read the [brief](brief.md)
+
+> The walkthrough and preview links above are live once GitHub Pages is enabled (Settings → Pages → `main` / root). The walkthrough is also at [`walkthrough/index.html`](walkthrough/index.html) and the preview at [`examples/summit-ridge-health-plan/06_preview/preview.html`](examples/summit-ridge-health-plan/06_preview/preview.html) — open them over a local server (or Pages) so the audio plays.
+
 ## The problem
 
 Solutions engineers build a custom demo for nearly every prospect, by hand, from the discovery-call transcript — three to five hours each of re-reading the call, picking the capabilities that fit, inventing realistic sample data, and assembling something to show. Under deadline that collapses into a generic template deck with the same fake "Acme Corp" data, and those demos land flat because the prospect sees a brochure, not their own workflow. Worse, the judgment never compounds: every transcript starts from zero. See [brief.md](brief.md).
