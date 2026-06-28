@@ -1,6 +1,6 @@
 # Solution Patterns — the customer-pain-to-solution playbook
 
-This is the leverage file. Everything else in Pitchcraft is plumbing; the quality of the
+This is the leverage file. Everything else in DemoWorks is plumbing; the quality of the
 recommendation comes from matching a transcript to the right pattern and being honest
 about its limits.
 

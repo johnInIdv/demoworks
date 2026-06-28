@@ -1,11 +1,11 @@
-# Pitchcraft — Rules (the method)
+# DemoWorks — Rules (the method)
 
 This file is the methodology. It documents the six-stage pipeline that turns a transcript
 into a tailored demo, the review gates between stages, the stop/continue decisions, and the
 honesty rules that apply throughout.
 
 The pipeline is **product-agnostic**. It tells you *what to do at each stage*; the
-`reference/` files tell you *what to do it with*. Re-pointing Pitchcraft at a different
+`reference/` files tell you *what to do it with*. Re-pointing DemoWorks at a different
 product means swapping `reference/`, not editing this file.
 
 ---
@@ -118,7 +118,7 @@ escalates go on to stages 04–06.
 These apply at every stage.
 
 - **Stage outputs are review gates, not final outputs.** A human reads and edits each stage
-  output before the next stage runs. Pitchcraft drafts; the rep decides.
+  output before the next stage runs. DemoWorks drafts; the rep decides.
 - **Most transcripts stop at stage 03.** Triage filters hard, and a written recommendation
   is the common terminal output. Stages 04–06 run only for escalated opportunities. Don't
   build a full demo for every transcript.
@@ -127,7 +127,7 @@ These apply at every stage.
   Atlas Skill is a one-click toggle — it's a real build lift whose true blocker is eliciting
   the customer's criteria. Don't imply the Determination Library populates itself — it needs
   conversion, review, and a curator. The gate is the trust signal, not a footnote.
-- **Output is an analytical aid, never a coverage determination.** Nothing Pitchcraft
+- **Output is an analytical aid, never a coverage determination.** Nothing DemoWorks
   produces decides what a human must decide. State this on every customer call, put it in
   the demo, and never let any artifact imply auto-adjudication.
 - **Specific beats generic, always.** Quote the customer's words. Name their documents,

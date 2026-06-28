@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Pitchcraft — narrated walkthrough (~1.5 min). Self-contained HTML/CSS/JS + SVG; narration in
+<!-- DemoWorks — narrated walkthrough (~1.5 min). Self-contained HTML/CSS/JS + SVG; narration in
      audio/sceneN.mp3 (voiced with ElevenLabs). Each scene auto-advances when its clip ends; if audio
      can't load, it falls back to a timed advance (data-dur). Press "Play with sound" (browsers need a
      click before audio). Controls: play/pause, click a progress segment to jump, space / ← → / R. -->
@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pitchcraft — a walkthrough</title>
+<title>DemoWorks — a walkthrough</title>
 <style>
   :root{
     --ink:#111;--mute:#9a9a9c;--stone:#cfcfd2;--teal:#37c2cf;--pink:#ed1aa0;--pink-soft:#ffb0dd;--purple:#beaffd;
@@ -82,14 +82,14 @@
 
   <section class="scene" data-audio="audio/scene1.mp3" data-dur="7">
     <div class="eyebrow">A walkthrough</div>
-    <h1 class="anim d1"><span class="grad-text">Pitchcraft</span></h1>
+    <h1 class="anim d1"><span class="grad-text">DemoWorks</span></h1>
     <p class="sub anim d2">A folder-based specialist that turns a customer discovery-call transcript into a tailored, working product demo.</p>
     <svg class="ribbon anim d3" viewBox="0 0 1000 120" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ed1aa0"/><stop offset=".55" stop-color="#beaffd"/><stop offset="1" stop-color="#37c2cf"/></linearGradient></defs><rect width="1000" height="120" fill="#111"/><path d="M0,86 C220,40 360,118 540,74 C720,30 860,96 1000,58 L1000,120 L0,120 Z" fill="url(#g)" opacity=".95"/><path d="M0,104 C200,72 380,128 560,96 C760,60 880,112 1000,84 L1000,120 L0,120 Z" fill="url(#g)" opacity=".5"/></svg>
   </section>
 
   <section class="scene" data-audio="audio/scene2.mp3" data-dur="13">
     <div class="eyebrow">01 — The problem</div>
-    <h2 class="anim d1">Every prospect demo is hand-built from the call.</h2>
+    <h2 class="anim d1">Every prospect demo is hand-built from the discovery call.</h2>
     <div class="stats">
       <div class="stat anim d2"><div class="n">3–5 hrs</div><div class="l">to build each custom demo by hand</div></div>
       <div class="stat anim d3"><div class="n">Generic</div><div class="l">templates land flat — a brochure, not their workflow</div></div>
@@ -102,7 +102,7 @@
     <h2 class="anim d1">So I built the folder I wished I had.</h2>
     <p class="sub anim d2" style="max-width:46ch">Drop a transcript in — it does what I do, in order, and produces a demo.</p>
     <div class="tree anim d3" style="margin-top:22px">
-      <div><span class="hi">pitchcraft/</span></div>
+      <div><span class="hi">demoworks/</span></div>
       <div>├─ <span class="hi">brief.md</span> <span class="c">— the real problem</span></div>
       <div>├─ <span class="hi">identity.md</span> · <span class="hi">rules.md</span> <span class="c">— who it is + the method</span></div>
       <div>├─ <span class="b">reference/</span> <span class="c">— the knowledge (the leverage)</span></div>
@@ -119,7 +119,7 @@
       <div>├─ <span class="hi">product-capabilities.md</span> <span class="c">— what it does + honest limits</span></div>
       <div>└─ <span class="hi">triage-criteria.md</span> <span class="c">— what's worth a deep build</span></div>
     </div>
-    <p class="sub anim d3" style="max-width:50ch">Swap <b style="color:#fff">reference/</b> and you re-point Pitchcraft at a different product — without touching the method.</p>
+    <p class="sub anim d3" style="max-width:52ch">Swap <b style="color:#fff">reference/</b> to build demos for <b style="color:#fff">your</b> product — or a different one — without touching the method.</p>
   </section>
 
   <section class="scene" data-audio="audio/scene5.mp3" data-dur="15">
@@ -140,7 +140,7 @@
     <div class="eyebrow">05 — The trigger</div>
     <h2 class="anim d1">Paste a transcript. That's the whole action.</h2>
     <div class="term anim d2" style="margin-top:22px">
-      <div><span class="p">pitchcraft %</span> <span class="q">claude</span></div>
+      <div><span class="p">demoworks %</span> <span class="q">claude</span></div>
       <div style="color:#8a8a8a">▸ reads CLAUDE.md — "a transcript is the go"</div>
       <div style="margin-top:8px"><span class="p">&gt;</span> <span class="q">[ paste discovery-call transcript ]</span></div>
       <div class="run" style="margin-top:8px">▶ Stage 01 Triage… 02 Workflow… 03 Opportunity map… → preview.html</div>
@@ -148,41 +148,46 @@
     <p class="sub anim d3" style="max-width:48ch">No prompt, no setup. Claude runs the pipeline and writes every stage.</p>
   </section>
 
-  <section class="scene" data-audio="audio/scene7.mp3" data-dur="12">
-    <div class="eyebrow">06 — It reasons, it doesn't repeat</div>
-    <h2 class="anim d1">Different call, different recommendation.</h2>
+  <section class="scene" data-audio="audio/scene7.mp3" data-dur="15">
+    <div class="eyebrow">06 — Specific to each call</div>
+    <h2 class="anim d1">Each call raises a different problem. Each demo is built for it.</h2>
     <div class="paths">
       <div class="path anim d2">
-        <div class="who">Health plan · UR team</div>
-        <div class="lead">Adjudication variance <span class="arrow">→</span></div>
-        <span class="chip a">Lead: medical-necessity checklist</span>
+        <div class="who">One discovery call</div>
+        <div class="lead">Pain: adjudication variance <span class="arrow">→</span></div>
+        <span class="chip a">Demo: a medical-necessity checklist</span>
       </div>
       <div class="path anim d3">
-        <div class="who">Health plan · appeals intake</div>
-        <div class="lead">Front-door triage <span class="arrow">→</span></div>
-        <span class="chip b">Lead: intake classification</span>
+        <div class="who">Another discovery call</div>
+        <div class="lead">Pain: an appeals backlog <span class="arrow">→</span></div>
+        <span class="chip b">Demo: intake classification</span>
       </div>
     </div>
-    <p class="sub anim d4" style="max-width:54ch">It quotes the customer's own words and carries the honest limits — instead of overselling.</p>
+    <p class="sub anim d4" style="max-width:56ch">Same product — DemoWorks builds for the exact problem raised on that call, in the customer's own words.</p>
   </section>
 
-  <section class="scene" data-audio="audio/scene8.mp3" data-dur="8">
+  <section class="scene" data-audio="audio/scene8.mp3" data-dur="13">
     <div class="eyebrow">07 — The payoff</div>
-    <h2 class="anim d1">A one-page preview to send before the meeting.</h2>
-    <div class="mini anim d2" style="margin-top:18px">
-      <div class="mhero"><div class="mk">A demo built on your workflow</div><h3>See your own spine case — reviewed in minutes.</h3></div>
-      <div class="mrib"></div>
-      <div class="mcap">Checklist output — synthetic case</div>
-      <div class="mrow"><span class="mc">Symptom duration</span><span class="ok">Met</span></div>
-      <div class="mrow"><span class="mc">Imaging correlation</span><span class="ok">Met</span></div>
-      <div class="mrow"><span class="mc">Conservative therapy — min. duration</span><span class="no">Not documented</span></div>
+    <h2 class="anim d1">The real payoff: a complete demo, built for you.</h2>
+    <div style="display:flex;gap:24px;align-items:stretch;flex-wrap:wrap;margin-top:20px">
+      <div style="flex:1 1 270px;min-width:250px;display:flex;flex-direction:column;gap:10px">
+        <div class="stat anim d2"><div class="n" style="font-size:clamp(15px,2vw,21px);letter-spacing:-.4px">1 · A complete demo</div><div class="l">sample data, a configured skill, and the staged plan — ready to walk through on the next call. The 3–5 hours of build, done.</div></div>
+        <div class="stat anim d3"><div class="n" style="font-size:clamp(15px,2vw,21px);letter-spacing:-.4px">2 · A one-page preview</div><div class="l">sent first — gets the prospect excited to show up for that demo</div></div>
+      </div>
+      <div class="mini anim d4" style="flex:1 1 300px;min-width:280px;align-self:center">
+        <div class="mhero"><div class="mk">Send this first · a demo built on your workflow</div><h3>See your own spine case — reviewed in minutes.</h3></div>
+        <div class="mrib"></div>
+        <div class="mcap">Checklist output — synthetic case</div>
+        <div class="mrow"><span class="mc">Symptom duration</span><span class="ok">Met</span></div>
+        <div class="mrow"><span class="mc">Conservative therapy — min. duration</span><span class="no">Not documented</span></div>
+      </div>
     </div>
   </section>
 
   <section class="scene" data-audio="audio/scene9.mp3" data-dur="4">
-    <div class="eyebrow">Pitchcraft</div>
+    <div class="eyebrow">DemoWorks</div>
     <h1 class="anim d1">A real problem, scoped and<br>shipped as a <span class="grad-text">folder</span>.</h1>
-    <p class="sub anim d2">github.com/johnInIdv/pitchcraft</p>
+    <p class="sub anim d2">github.com/johnInIdv/demoworks</p>
     <p class="credit anim d3">Voiced with ElevenLabs</p>
   </section>
 

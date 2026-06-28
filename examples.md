@@ -1,4 +1,4 @@
-# Pitchcraft in action — Summit Ridge Health Plan
+# DemoWorks in action — Summit Ridge Health Plan
 
 A worked end-to-end run: one raw discovery-call transcript, all six stages, a sharable preview at the end. This is the proof that the folder does what the brief asks.
 
